@@ -1,18 +1,25 @@
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-[user]
-	name = Pham Van Hung
-	email = phamvanhung2e123@gmail.com
+        co = checkout
+        st = status
+        br = branch
+        ci = commit
+        last = log -1 HEAD
+        difff = diff --word-diff
+        tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+        tree = log --graph --pretty=oneline --abbrev-commit --decorate
 [core]
-	excludesfile = /Users/vanhungpham/.gitignore_global
+        excludesfile = ~/.gitignore_global
+        editor = /usr/bin/vim
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[user]
+        name = ファム ヴァンフン
+        email = vanhung.pham@mixi.co.jp
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f

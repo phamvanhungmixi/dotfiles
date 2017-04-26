@@ -1,12 +1,13 @@
 syntax on
 set number
-set mouse=a
+set expandtab
+:set mouse=v
 set clipboard=unnamedplus
 set clipboard^=autoselect
 set backspace=indent,eol,start
 vmap <C-c> y:new ~/.vimbuf<CR>VGp:x<CR>:!pbcopy < ~/.vimbuf<CR><CR>
 map <C-n> :NERDTreeToggle<CR>
-
+noremap <silent><C-e> :NERDTreeToggle<CR>
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   if &compatible
@@ -14,11 +15,11 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=/Users/vanhungpham/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/vanhungpham/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -33,7 +34,9 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'scrooloose/nerdtree'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
-
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Yggdroot/indentLine'
+let g:indentLine_color_term = 239
 " Required:
 call neobundle#end()
 
@@ -43,5 +46,6 @@ filetype plugin indent on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
+syntax enable
+let g:rsenseHome = "RSense home"
 "End NeoBundle Scripts-------------------------
-
