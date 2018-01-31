@@ -1,9 +1,9 @@
 syntax on
-set number
+" set number
 set expandtab
-:set mouse=v
-set clipboard=unnamedplus
-set clipboard^=autoselect
+" :set mouse=v
+" set clipboard=unnamedplus
+" set clipboard^=autoselect
 set backspace=indent,eol,start
 vmap <C-c> y:new ~/.vimbuf<CR>VGp:x<CR>:!pbcopy < ~/.vimbuf<CR><CR>
 map <C-n> :NERDTreeToggle<CR>
