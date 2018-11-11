@@ -1,11 +1,11 @@
 syntax on
 set number
-set expandtab
-:set mouse=v
-set clipboard=unnamedplus
-set clipboard^=autoselect
+"set expandtab
+":set mouse=v
+"set clipboard=unnamedplus
+"set clipboard^=autoselect
 set backspace=indent,eol,start
-vmap <C-c> y:new ~/.vimbuf<CR>VGp:x<CR>:!pbcopy < ~/.vimbuf<CR><CR>
+"vmap <C-c> y:new ~/.vimbuf<CR>VGp:x<CR>:!pbcopy < ~/.vimbuf<CR><CR>
 map <C-n> :NERDTreeToggle<CR>
 noremap <silent><C-e> :NERDTreeToggle<CR>
 "NeoBundle Scripts-----------------------------
