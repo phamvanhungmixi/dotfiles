@@ -106,3 +106,10 @@ export LDFLAGS="-L/usr/local/opt/openssl/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vanhung.pham/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vanhung.pham/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vanhung.pham/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vanhung.pham/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
