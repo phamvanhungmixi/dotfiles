@@ -107,7 +107,9 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 export PATH="/usr/local/go/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
-
+export PATH=~/.npm-global/bin:$PATH
+export PATH="/Users/vanhung.pham/Library/Python/3.7/bin:$PATH"
+export JAVA_HOME=`/usr/libexec/java_home -v 12`
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/vanhung.pham/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vanhung.pham/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
